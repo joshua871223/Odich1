@@ -1,0 +1,26 @@
+module.exports = class UserDto {
+    id;
+    firstName;
+    lastName;
+    email;
+    roles;
+    isActivated;
+    confirmAuthStatus;
+    companyId;
+    isPwdChanged;
+
+    constructor(model) {
+        if (!model) {
+            throw new Error('UserDto: model cannot be null or undefined');
+        }
+        this.email = model.email;
+        this.id = model._id;
+        this.firstName = model.firstName;
+        this.lastName = model.lastName;
+        this.roles = model.roles;
+        this.isActivated = model.isActivated;
+        this.confirmAuthStatus = model.confirmAuthStatus;
+        this.companyId = model.companyId;
+        this.isPwdChanged = model?.isPwdChanged;
+    }
+};
