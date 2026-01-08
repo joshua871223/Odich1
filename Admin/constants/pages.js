@@ -12,3 +12,4 @@ export const BONUSES_PAGE = 'BONUSES_PAGE';
 export const TRANSACTIONS_PAGE = 'TRANSACTIONS_PAGE';
 export const LOGIN_PAGE = 'LOGIN_PAGE';
 export const SYS_ADMIN = 'SYS_ADMIN';
+export const PROFILE_PAGE = 'PROFILE_PAGE';

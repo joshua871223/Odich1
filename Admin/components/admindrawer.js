@@ -32,6 +32,7 @@ import Transactions from './pages/Transactions';
 import Admin from './pages/Admin';
 import Login from './pages/login';
 import SysAdmin from './pages/sysadmin';
+import ProfilePage from './pages/Profile';
 import School from '../components/assets/svg/school.svg';
 import SchoolOff from '../components/assets/svg/school_off.svg';
 import Profile from '../components/assets/svg/profile.svg';
@@ -185,6 +186,8 @@ export default function AdminDrawer(props) {
             );
         } else if (currentPage === Pages.SYS_ADMIN) {
             return <SysAdmin />;
+        } else if (currentPage === Pages.PROFILE_PAGE) {
+            return <ProfilePage />;
         }
     }
 

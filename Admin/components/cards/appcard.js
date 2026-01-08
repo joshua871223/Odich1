@@ -121,7 +121,14 @@ const AppHeader = ({ currentPage, name, company, changePage }) => {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+            <MenuItem 
+                onClick={() => {
+                    handleMenuClose();
+                    changePage(Pages.PROFILE_PAGE);
+                }}
+            >
+                Profile
+            </MenuItem>
             <MenuItem onClick={handleMenuClose}>My account</MenuItem>
         </Menu>
     );
@@ -219,14 +226,16 @@ const AppHeader = ({ currentPage, name, company, changePage }) => {
                             marginRight: 10,
                             bottom: 10,
                             height: '65px',
+                            cursor: 'pointer',
                         }}
                         key={Pages.HELP_PAGE}
+                        onClick={handleProfileMenuOpen}
                     >
                         <ListItem>
                             <img
                                 src={imgUrl}
                                 alt="Odichi"
-                                style={{ borderRadius: 200 }}
+                                style={{ borderRadius: 200, cursor: 'pointer' }}
                                 width={30}
                                 height={30}
                             />
